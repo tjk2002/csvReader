@@ -33,7 +33,7 @@ public class Reader {
         ArrayList<Student> records = new ArrayList<>(); //Create an ArrayList to store student objects
 
         try (CSVReader csvReader = new CSVReader(new FileReader(fileName))) { //Use a try with resources statement to automatically close the file handler
-        	//Serving virtually the same purpose as a while loop (reading each line of the csv until none remain) but try catch is better for resource management
+       
         	
         	String[] header = csvReader.readNext(); //Read and ignore the header row (column names)
         	
@@ -59,7 +59,7 @@ public class Reader {
         return records; //Return the ArrayList of student objects
     }
 
-    // Main method - entry point of the program
+    // Main method
     public static void main(String[] args) {
         // Specify the path to the CSV file
         String fileName = "C:\\Users\\tobia\\Documents\\Book1.csv";
